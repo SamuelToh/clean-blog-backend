@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  # clean-blog database
+  mongodb:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - ./db_data:/data/db
+      - ./db_config:/data/configdb
